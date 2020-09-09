@@ -1,4 +1,4 @@
 #!/bin/bash
 # A script that displays the contents of my directory
 
-ls 1-listit
+ls
