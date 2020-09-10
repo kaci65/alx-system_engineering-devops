@@ -1,2 +1,3 @@
 #!/bin/bash
-install -m 751 -d /alx-system_engineering-devops/0x01-shell_permissions/dir_holberton
+mkdir -m751 dir_holberton
+
