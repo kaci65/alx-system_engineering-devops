@@ -1,2 +1,2 @@
 #!/bin/bash
-export echo $(($BREATH**$LOVE))
+env echo $(($BREATH**$LOVE))
