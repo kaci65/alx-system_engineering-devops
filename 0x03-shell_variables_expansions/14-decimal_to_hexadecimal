@@ -1,2 +1,2 @@
 #!/bin/bash
-env echo $((16#10))
+env echo $((10#$DECIMAL))
