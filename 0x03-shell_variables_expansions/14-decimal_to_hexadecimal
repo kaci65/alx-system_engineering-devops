@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv echo $((16#10))
+env echo $((16#10))
