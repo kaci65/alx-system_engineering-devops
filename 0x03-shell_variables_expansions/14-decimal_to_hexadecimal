@@ -1,0 +1,2 @@
+#!/bin/bash
+printenv echo $((16#10))
