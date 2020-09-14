@@ -1,2 +1,2 @@
 #!/bin/bash
-sed 'c/d' 'C/d'
+tr 'c' 'C'
