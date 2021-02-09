@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# script displays text indefinitely
+# add sleep 2 between each loop iteration
 while true
 do
 	echo "To infinity and beyond"

@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# script displays lines containing the bash word
 ps auxf | grep 'bash'

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# script prints text an infinitely and executes a
+# command when the shell receives sigterm signal
 while true
 do
 	echo "To infinity and beyond"
