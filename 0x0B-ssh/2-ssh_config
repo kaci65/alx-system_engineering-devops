@@ -1,0 +1,6 @@
+#!/user/bin/env bash
+# configure ssh configuation file to connect to a server without password
+Host 35.231.35.245
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentification no
+    BatchMode yes
