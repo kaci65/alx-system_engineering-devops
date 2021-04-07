@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# get Apache to run on the container and return page containing Hello Holberton
+
+# newer ubuntu/debian versions
+# sudo systemctl start apache2
+
+# older ubuntu/debian versions
+sudo service apache2 start
