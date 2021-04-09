@@ -3,6 +3,5 @@
 
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install nginx
-curl 35.231.35.245/
-echo "Holberton School" > /var/www/html/index.html
-sudo service nginx start
+curl 35.231.35.245/ > echo "Holberton School" > /var/www/html/index.html
+sudo service nginx restart
