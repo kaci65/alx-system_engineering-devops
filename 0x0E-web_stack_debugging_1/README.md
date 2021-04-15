@@ -20,3 +20,6 @@ How to reload and restart Nginx<https://help.dreamhost.com/hc/en-us/articles/216
 StackOverflow(a)<https://stackoverflow.com/questions/30374932/brand-new-ubuntu-14-04-2-docker-container-nginx-connection-refused-on-port-80#30376956>
 StackOverflow(b)<https://askubuntu.com/questions/1215928/curl-7-failed-to-connect-to-localhost-port-8080-connection-refused>
 StackOverflow(c)<https://stackoverflow.com/questions/12715871/nginx-not-picking-up-site-in-sites-enabled#14107803>
+StackOverflow(d)<https://stackoverflow.com/questions/19215641/remove-default-nginx-welcome-page-when-access-directly-from-ip-address>
+Setting up UFW a secured nginx<https://blog.usejournal.com/setting-up-a-ufw-secured-nginx-reverse-proxy-with-http-authentication-and-tls-certificates-from-b1103d67779f>
+```
