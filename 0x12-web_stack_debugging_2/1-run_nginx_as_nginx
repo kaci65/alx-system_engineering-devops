@@ -6,4 +6,4 @@ chmod 700 /etc/nginx/nginx.conf
 ufw allow 'Nginx HTTP'
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+sudo -u nginx service nginx restart
