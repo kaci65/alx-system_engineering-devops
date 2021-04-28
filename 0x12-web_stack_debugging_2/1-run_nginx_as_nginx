@@ -3,7 +3,7 @@
 
 p-kill -9 nginx
 chmod 700 /etc/nginx/nginx.conf
-# ufw allow 'Nginx HTTP'
+ufw allow 'Nginx HTTP'
 # rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 sudo -u nginx service nginx restart
