@@ -17,7 +17,7 @@ if __name__ == "__main__":
     userList = requests.get(userUrl.format(userId)).json()
     todoList = requests.get(todoUrl.format(userId)).json()
 
-    employeeName = userList.get("name")
+    employeeName = userList.get("username")
     taskList = []
     tasksDict = {}
 
