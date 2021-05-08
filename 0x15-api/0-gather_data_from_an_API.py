@@ -22,10 +22,9 @@ if __name__ == "__main__":
 
     for task in todoList:
         if task.get('userId') == userList.get('id'):
-            tasksTitles.append(task["title"])
-            if tasksTitles:
-                if task.get('completed'):
-                    tasksCompleted += 1
+            if task.get('completed'):
+                tasksCompleted += 1
+                tasksTitles.append(task["title"])
     numTasks = len(tasksTitles)
 
     print("Employee {} is done with tasks({}/{}):"
