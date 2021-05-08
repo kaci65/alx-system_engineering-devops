@@ -16,7 +16,6 @@ if __name__ == "__main__":
     userList = requests.get(userUrl.format(userId)).json()
     todoList = requests.get(todoUrl.format(userId)).json()
 
-
     employeeName = userList.get("name")
     tasksCompleted = 0
     tasksTitles = []
@@ -24,9 +23,10 @@ if __name__ == "__main__":
     for task in todoList:
         if task.get('userId') == userList.get('id'):
             tasksTitles.append(task["title"])
-            if task.get('completed'):
-                tasksCompleted += 1
-    numTasks = len(tasksTitles)          
+            if tasksTitles:
+                if task.get('completed'):
+                    tasksCompleted += 1
+    numTasks = len(tasksTitles)
 
     print("Employee {} is done with tasks({}/{}):"
           .format(employeeName, tasksCompleted, numTasks))
