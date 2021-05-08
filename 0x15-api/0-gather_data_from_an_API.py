@@ -18,14 +18,15 @@ if __name__ == "__main__":
 
     employeeName = userList.get("name")
     tasksCompleted = 0
+    numTasks = 0
     tasksTitles = []
 
     for task in todoList:
         if task.get('userId') == userList.get('id'):
+            numTasks += 1
             if task.get('completed'):
                 tasksCompleted += 1
-                tasksTitles.append(task["title"])
-    numTasks = len(tasksTitles)
+                tasksTitles.append(task["title"])   
 
     print("Employee {} is done with tasks({}/{}):"
           .format(employeeName, tasksCompleted, numTasks))
