@@ -19,12 +19,14 @@ if __name__ == "__main__":
 
     employeeName = userList.get("name")
     taskList = []
+    tasksDict = {}
 
     for task in todoList:
         if task.get('userId') == userList.get('id'):
             taskList.append({"task": task.get("title"),
                              "completed": task.get("completed"),
                              "username": employeeName})
+    tasksDict[userId] = taskList
 
     with open("user_id.json", mode="w") as f_json:
-        json.dump(taskList, f_json)
+        json.dump(tasksDict, f_json)
