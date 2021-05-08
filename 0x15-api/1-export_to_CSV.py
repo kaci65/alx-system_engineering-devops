@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module Export to CSV"""
+"""
+Using '0-gather_data_from_an_API.py', extend your script to export
+data in CSV format
+"""
 
 import csv
 import requests
@@ -7,17 +10,21 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    _id = argv[1]
-    url_users = 'https://jsonplaceholder.typicode.com/users/{}'.format(_id)
-    url_todo = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
-        _id)
+    userId = argv[1]
+    userUrl = "https://jsonplaceholder.typicode.com/users/{}"
+    todoUrl = "https://jsonplaceholder.typicode.com/todos"
 
-    req_user = requests.get(url_users).json()
-    req_todo = requests.get(url_todo).json()
+    userList = requests.get(userUrl.format(userId)).json()
+    todoList = requests.get(todoUrl.format(userId)).json()
 
-    with open('{}.csv'.format(_id), mode='w') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=',',
-                                quoting=csv.QUOTE_ALL)
-        for task in req_todo:
-            csv_writer.writerow([task['userId'], req_user['username'],
-                                 task['completed'], task['title']])
+    employeeName = userList.get("name")
+    tasksCompleted = 0
+    numTasks = 0
+    tasksTitles = []
+
+    with open('{}.csv'.format(userId), mode='w') as file:
+        csvFormat = csv.writer(file, quoting=csv.QUOTE_ALL)
+        for task in todoList:
+            if task.get('userId') == userList.get('id'):
+                csvFormat .writerow([userId, employeeName,
+                                    task.get('completed'), task.get('title')])
