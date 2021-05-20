@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-query the Reddit API and return number of subscribers (not 
+query the Reddit API and return number of subscribers (not
 active users, total subscribers) for a given subreddit
 """
 
@@ -11,7 +11,7 @@ def number_of_subscribers(subreddit):
     """return number of subscribers"""
     listing = 'about'
     url = 'https://www.reddit.com/r/{}/{}.json'.format(subreddit, listing)
-    req = requests.get(url, headers = {'User-Agent': 'X-Modhash'},
+    req = requests.get(url, headers={'User-Agent': 'X-Modhash'},
                        allow_redirects=False)
     if req.status_code == 300 or req.status_code == 404:
         return 0
