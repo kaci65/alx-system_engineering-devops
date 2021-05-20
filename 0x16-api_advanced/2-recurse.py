@@ -11,8 +11,8 @@ def recurse(subreddit, hot_list=[], after=None):
     """return list of titles in hot articles"""
     sort = 'hot'
     params = {'after': after}
-    url = f'https://www.reddit.com/r/{subreddit}/{sort}.json'
-    req = requests.get(url, headers = {'User-Agent': 'X-Modhash'},
+    url = 'https://www.reddit.com/r/{}/{}.json'.format(subreddit, sort)
+    req = requests.get(url, headers={'User-Agent': 'X-Modhash'},
                        params=params,
                        allow_redirects=False)
     if req.status_code == 300 or req.status_code == 404:
