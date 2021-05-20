@@ -17,5 +17,6 @@ def top_ten(subreddit):
                        allow_redirects=False)
     if req.status_code == 300 or req.status_code == 404:
         print(None)
-    for post in req.json()['data']['children']:
-        print(post['data']['title'])
+    else:
+        for post in req.json()['data']['children']:
+            print(post['data']['title'])
